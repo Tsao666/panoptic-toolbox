@@ -62,7 +62,7 @@ do
 	
   	echo $fileName;
 	cmd=$(printf "$WGET $mO vgaVideos/$fileName $endpoint/webdata/dataset/$datasetName/videos/vga_shared_crf10/$fileName || rm -v vgaVideos/$fileName")
-	eval $cmd
+	# eval $cmd
 done
 
 
@@ -93,9 +93,9 @@ $WGET $mO calibration_${datasetName}.json $endpoint/webdata/dataset/$datasetName
 
 # 3D Body Keypoint (Coco19 keypoint definition)
 # Download 3D pose reconstruction results (by vga index, coco19 format)
-if [ ! -f hdPose3d_stage1_coco19.tar ]; then
-$WGET $mO hdPose3d_stage1_coco19.tar  $endpoint/webdata/dataset/$datasetName/hdPose3d_stage1_coco19.tar || rm -v hdPose3d_stage1_coco19.tar 
-fi
+# if [ ! -f hdPose3d_stage1_coco19.tar ]; then
+# $WGET $mO hdPose3d_stage1_coco19.tar  $endpoint/webdata/dataset/$datasetName/hdPose3d_stage1_coco19.tar || rm -v hdPose3d_stage1_coco19.tar 
+# fi
 
 # 3D Face 
 if [ ! -f hdFace3d.tar ]; then
@@ -103,9 +103,9 @@ $WGET $mO hdFace3d.tar $endpoint/webdata/dataset/$datasetName/hdFace3d.tar || rm
 fi
 
 # 3D Hand
-if [ ! -f hdHand3d.tar ]; then
-$WGET $mO hdHand3d.tar $endpoint/webdata/dataset/$datasetName/hdHand3d.tar || rm -v hdHand3d.tar
-fi
+# if [ ! -f hdHand3d.tar ]; then
+# $WGET $mO hdHand3d.tar $endpoint/webdata/dataset/$datasetName/hdHand3d.tar || rm -v hdHand3d.tar
+# fi
 
 
 # 3D Face Fitting Output
